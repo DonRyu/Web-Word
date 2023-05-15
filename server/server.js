@@ -8,9 +8,6 @@ mongoose.connect("mongodb://localhost/google-docs-clone", {
   useCreateIndex: true,
 }).then(() => {
   console.log('Connected to MongoDB');
-  app.listen(3001, () => {
-    console.log('server is running at 3001');
-  });
 })
 .catch((err) => {
   console.error('MongoDB connect error==>', err);
