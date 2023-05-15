@@ -6,11 +6,19 @@ mongoose.connect("mongodb://localhost/google-docs-clone", {
   useUnifiedTopology: true,
   useFindAndModify: false,
   useCreateIndex: true,
+}).then(() => {
+  console.log('Connected to MongoDB');
+  // 서버 시작
+  app.listen(3001, () => {
+    console.log('server is running at 3001');
+  });
 })
+.catch((err) => {
+  console.error('MongoDB connect error:', err);
+});
 
 const io = require("socket.io")(3001, {
   cors: {
-    
     origin: "http://localhost:3000",
     methods: ["GET", "POST"],
   },
