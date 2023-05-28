@@ -21,6 +21,8 @@ The Web Word Processor is a web-based real-time word processor. This project was
 - Express.js
 - Socket.IO
 
+## Installation and Setup
 
-
-
+-Download Mongo DB and made google-docs-clone database
+-Download node module for client and run npm start
+-Donwload node module for server and rum npm start
