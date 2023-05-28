@@ -26,7 +26,7 @@ export default function TextEditor() {
   const [docName, setDocName] = useState("Untitled");
 
   useEffect(() => {
-    const s = io("http://localhost:3001");
+    const s = io("http://3.83.8.232/:3001");
     setSocket(s);
 
     return () => {
